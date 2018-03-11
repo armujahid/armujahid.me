@@ -25,6 +25,7 @@ after_success: |
     cd "$TRAVIS_BUILD_DIR"
     # This generates a `web` directory containing the website.
     cd _site
+    touch .nojekyll # this file tells gh-pages that there is no need to build
     git init
     git checkout -b gh-pages
     git add .

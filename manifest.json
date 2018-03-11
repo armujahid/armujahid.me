@@ -25,6 +25,10 @@
         "src": "https://www.gravatar.com/avatar/a63d01e7ff1962585ede95d6ee5369b5?s=192.png",
         "sizes": "192x192",
         "type": "image/png"
+      }, {
+        "src": "https://www.gravatar.com/avatar/a63d01e7ff1962585ede95d6ee5369b5?s=512.png",
+        "sizes": "512x512",
+        "type": "image/png"
       }],
     "start_url": "/",
     "display": "standalone",

@@ -23,6 +23,9 @@ sudo: false # route your build to the container-based infrastructure for a faste
 deploy:
   provider: pages
   skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
+  local-dir: _site/
+  verbose: true
   on:
-    branch: gh-pages
+    branch: master

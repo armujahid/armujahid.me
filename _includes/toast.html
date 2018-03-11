@@ -1,0 +1,28 @@
+<div id="snackbar">
+    <div>New version available</div>
+    <button onclick="refresh()">refresh</button>
+    <button onclick="hide()">dismiss</button>
+</div> 
+
+<script>
+    var refreshing;
+
+    window.addEventListener('sw.update', function() {
+        var toast = document.getElementById("snackbar")
+        toast.className = "show";
+    });
+
+    // Ensure refresh is only called once.
+    // This works around a bug in "force update on reload".
+    function refresh() {
+        if (refreshing) return;
+        window.location.reload();
+        refreshing = true;
+    }
+
+    function hide() {
+        var toast = document.getElementById("snackbar")
+        toast.className = toast.className.replace("show", "");   
+    }
+
+</script>

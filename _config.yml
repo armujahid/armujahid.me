@@ -110,11 +110,28 @@ prose:
           placeholder: "Image path (relative to /assets/post-images/)"
           alterable: true
 
+pwa:
+  sw_filename: sw.js # Required
+  dest_js_directory: assets/js # Required
+  cache_name: arm # Optional
+  precache_recent_posts_num: 5 # Optional
+  precache_glob_directory: / # Optional
+  precache_glob_patterns: # Optional
+    - "{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
+    - index.html
+    - style.css
+  precache_glob_ignores: # Optional
+    - sw-register.js
+  runtime_cache: # Optional
+    - route: "'/images/**'"
+      strategy: networkFirst
+
 # Use the following plug-ins
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-seo-tag # Create metadata tags for search engines and social networks
+  - jekyll-pwa-plugin # Create service worker
 
 # Exclude these files from your production _site
 exclude:

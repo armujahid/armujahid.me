@@ -288,3 +288,9 @@ footer {
 @import "highlights";
 @import "svg-icons";
 @import "toasts";
+
+.iframediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

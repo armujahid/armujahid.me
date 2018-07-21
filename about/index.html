@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About – Abdul Rauf – Engineer from Somewhere</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>About | Abdul Rauf</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="About" />
+<meta name="author" content="armujahid" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Engineer from Somewhere" />
+<meta property="og:description" content="Engineer from Somewhere" />
+<link rel="canonical" href="https://armujahid.me/about/" />
+<meta property="og:url" content="https://armujahid.me/about/" />
+<meta property="og:site_name" content="Abdul Rauf" />
+<script type="application/ld+json">
+{"name":"Abdul Rauf","description":"Engineer from Somewhere","author":{"@type":"Person","name":"armujahid"},"@type":"WebSite","url":"https://armujahid.me/about/","headline":"About","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Abdul Rauf - Engineer from Somewhere" href="/feed.xml" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#fff"/>
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://www.gravatar.com/avatar/a63d01e7ff1962585ede95d6ee5369b5?s=70" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Abdul Rauf</a></h1>
+            <p class="site-description">Engineer from Somewhere</p>
+          </div>
+
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="page">
+
+  <h1>About</h1>
+
+  <div class="entry">
+    <p>Some information about you!</p>
+
+<h3 id="more-information">More Information</h3>
+
+<p>A place to include any other types of information that you’d like to include about yourself.</p>
+
+<h3 id="contact-me">Contact me</h3>
+
+<p><a href="mailto:email@domain.com">email@domain.com</a></p>
+
+  </div>
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+
+<a href="https://www.facebook.com/armujahid"><i class="svg-icon facebook"></i></a>
+
+<a href="https://github.com/armujahid"><i class="svg-icon github"></i></a>
+
+<a href="https://www.linkedin.com/in/armujahid"><i class="svg-icon linkedin"></i></a>
+
+<a href="/feed.xml"><i class="svg-icon rss"></i></a>
+<a href="https://www.twitter.com/armujahid"><i class="svg-icon twitter"></i></a>
+<a href="http://stackoverflow.com/users/2073920/abdul-rauf"><i class="svg-icon stackoverflow"></i></a>
+
+<a href="https://plus.google.com/+AbdulRaufMujahid"><i class="svg-icon googleplus"></i></a>
+        </footer>
+      </div>
+    </div>
+    <div id="snackbar">
+    <div>New version available</div>
+    <button onclick="refresh()">refresh</button>
+    <button onclick="hide()">dismiss</button>
+</div> 
+
+<script>
+    var refreshing;
+
+    window.addEventListener('sw.update', function() {
+        var toast = document.getElementById("snackbar")
+        toast.className = "show";
+    });
+
+    // Ensure refresh is only called once.
+    // This works around a bug in "force update on reload".
+    function refresh() {
+        if (refreshing) return;
+        window.location.reload();
+        refreshing = true;
+    }
+
+    function hide() {
+        var toast = document.getElementById("snackbar")
+        toast.className = toast.className.replace("show", "");   
+    }
+
+</script>
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-44545146-4', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/about/',
+		  'title': 'About'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+              <script>
+                window.onload = function () {
+                    var script = document.createElement('script');
+                    var firstScript = document.getElementsByTagName('script')[0];
+                    script.type = 'text/javascript';
+                    script.async = true;
+                    script.src = '/sw-register.js?v=' + Date.now();
+                    firstScript.parentNode.insertBefore(script, firstScript);
+                };
+            </script>
+            </body>
+
+</html>

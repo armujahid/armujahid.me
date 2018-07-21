@@ -20,17 +20,11 @@ env:
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
-after_success: |
-  if [ -n "$GITHUB_API_KEY" ]; then
-    cd "$TRAVIS_BUILD_DIR"
-    cd _site
-    touch .nojekyll # this file tells gh-pages that there is no need to build
-    git init
-    git checkout -b gh-pages
-    git add .
-    git -c user.name='Deployment Bot' -c user.email='deploy@travis-ci.org' commit -m init
-    # Make sure to make the output quiet, or else the API token will leak!
-    # This works because the API key can replace your password.
-    git push -f -q https://armujahid:$GITHUB_API_KEY@github.com/armujahid/armujahid.me gh-pages &2>/dev/null
-    cd "$TRAVIS_BUILD_DIR"
-  fi
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep-history: true
+  local_dir: _site/  # deploy this directory containing final build
+  github_token: $GITHUB_API_KEY # Set in travis-ci.org dashboard
+  on:
+    branch: master
